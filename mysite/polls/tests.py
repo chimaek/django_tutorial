@@ -45,6 +45,7 @@ class QuestionModelTests(TestCase):
     def test_num3(self):
         dic = {"x":1,"y":2,"z":3}
         self.assertIsInstance(dic,dict)
+        self.assertIn("x",dic)
 
     def test_num4(self):
         data = None
