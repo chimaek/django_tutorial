@@ -32,3 +32,25 @@ class QuestionModelTests(TestCase):
         question = Question.objects.create(question_text="test",pub_date=timezone.now())
         question.delete()
         self.assertEqual(Question.objects.count(),0)
+
+    def test_num1(self):
+        li = [x for x in range(1,101)]
+        self.assertEqual(sum(li),5050)
+        self.assertEqual(len(li),100)
+
+    def test_num2(self):
+        dic = {x:x**2 for x in range(1,11)}
+        self.assertEqual(sum(dic.values()),385)
+
+    def test_num3(self):
+        dic = {"x":1,"y":2,"z":3}
+        self.assertIsInstance(dic,dict)
+
+    def test_num4(self):
+        data = None
+        self.assertIsNone(data)
+
+    def test_num5(self):
+        data = False
+        self.assertFalse(data)
+
